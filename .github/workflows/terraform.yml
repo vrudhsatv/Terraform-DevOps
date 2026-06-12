@@ -60,7 +60,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: tfplan-dev
-          path: infra/tfplan-dev
+          path: tfplan-dev
 
       - name: Post Plan to PR
         if: github.event_name == 'pull_request'
@@ -160,7 +160,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: tfplan-uat
-          path: infra/tfplan-uat
+          path: tfplan-uat
 
       - name: Post Plan to PR
         if: github.event_name == 'pull_request'
@@ -282,3 +282,4 @@ jobs:
 
       - name: Terraform Apply
         run: terraform apply -var-file=prod.tfvars -auto-approve
+#test
